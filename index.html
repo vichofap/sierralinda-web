@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sierra Linda Export 2025 Group IM</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: url('portada.jpeg') center/cover no-repeat;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    header * {
+      position: relative;
+    }
+
+    nav {
+      text-align: center;
+      margin: 10px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .whatsapp {
+      display: block;
+      width: 200px;
+      text-align: center;
+      background: #25D366;
+      color: white;
+      padding: 10px;
+      margin: 20px auto;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .productos {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* ZOOM al pasar el mouse */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay oculto */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Mostrar info en hover */
+.card:hover .overlay {
+  opacity: 1;
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 id="title">Sierra Linda Export 2025 Group IM</h1>
+  <p id="subtitle">Exportación de productos andinos de alta calidad</p>
+</header>
+
+<nav>
+  <button onclick="setLanguage('es')">Español</button>
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('ar')">العربية</button>
+</nav>
+
+<section>
+  <h2 id="aboutTitle">Sobre Nosotros</h2>
+  <p id="aboutText">
+    Somos una empresa peruana dedicada a la exportación de productos andinos como maca, quinua y harina de chuño.
+  </p>
+</section>
+
+<section>
+  <h2 id="productsTitle">Nuestros Productos</h2>
+
+  <div class="productos">
+
+  <!-- MACA -->
+  <div class="card" onclick="irProducto('maca.html')">
+    <img src="maca.jpg" alt="Maca">
+    <div class="overlay">
+      <h3>Maca</h3>
+      <p>Energía natural 💪<br>Mejora el rendimiento</p>
+    </div>
+  </div>
+
+  <!-- QUINUA -->
+  <div class="card" onclick="irProducto('quinua.html')">
+    <img src="quinua.png" alt="Quinua">
+    <div class="overlay">
+      <h3>Quinua</h3>
+      <p>Alta en proteína 🌾<br>Superalimento</p>
+    </div>
+  </div>
+
+  <!-- CHUÑO -->
+  <div class="card" onclick="irProducto('chuno.html')">
+    <img src="chuno.jpg" alt="Chuño">
+    <div class="overlay">
+      <h3>Chuño</h3>
+      <p>Tradicional andino 🏔️<br>Larga conservación</p>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+
+  <div id="infoProducto" style="margin-top:20px; text-align:center;"></div>
+
+</section>
+
+<section>
+  <h2 id="logisticsTitle">Producción y Logística</h2>
+  <p id="logisticsText">Contamos con procesos eficientes de producción, almacenamiento y distribución.</p>
+</section>
+
+<section>
+  <h2 id="zoneTitle">Zona de Producción</h2>
+  <p id="zoneText">Nuestros productos provienen de los Andes peruanos.</p>
+</section>
+
+<section>
+  <h2 id="visionTitle">Visión y Misión</h2>
+  <p id="visionText">Nuestra misión es llevar productos de alta calidad al mundo.</p>
+</section>
+
+<section>
+  <h2 id="equipmentTitle">Equipamiento</h2>
+  <p id="equipmentText">Contamos con maquinaria moderna para garantizar calidad.</p>
+</section>
+
+<section>
+  <h2 id="geoTitle">Coordenadas Geográficas</h2>
+  <p id="geoText">Ubicación estratégica en zonas productivas del Perú.</p>
+</section>
+
+<section>
+  <h2 id="marketTitle">Mercados</h2>
+  <p id="marketText">Exportamos a diferentes países del mundo.</p>
+</section>
+
+<section>
+  <h2 id="coopTitle">Cooperaciones</h2>
+  <p id="coopText">Trabajamos con productores locales y socios internacionales.</p>
+</section>
+
+<section>
+  <h2 id="contactTitle">Contáctanos</h2>
+  <p id="contactText">Contáctanos vía WhatsApp para más información.</p>
+  <a class="whatsapp" href="https://wa.me/51978344563" target="_blank">
+    WhatsApp
+  </a>
+</section>
+
+<script>
+
+    
+function setLanguage(lang) {
+
+  if (lang === 'es') {
+    document.getElementById('subtitle').innerText = "Exportación de productos andinos de alta calidad";
+    document.getElementById('aboutTitle').innerText = "Sobre Nosotros";
+    document.getElementById('aboutText').innerText = "Somos una empresa peruana dedicada a la exportación de productos andinos como maca, quinua y harina de chuño.";
+    document.getElementById('productsTitle').innerText = "Nuestros Productos";
+    document.getElementById('logisticsTitle').innerText = "Producción y Logística";
+    document.getElementById('logisticsText').innerText = "Contamos con procesos eficientes de producción, almacenamiento y distribución.";
+    document.getElementById('zoneTitle').innerText = "Zona de Producción";
+    document.getElementById('zoneText').innerText = "Nuestros productos provienen de los Andes peruanos.";
+    document.getElementById('visionTitle').innerText = "Visión y Misión";
+    document.getElementById('visionText').innerText = "Nuestra misión es llevar productos de alta calidad al mundo.";
+    document.getElementById('equipmentTitle').innerText = "Equipamiento";
+    document.getElementById('equipmentText').innerText = "Contamos con maquinaria moderna para garantizar calidad.";
+    document.getElementById('geoTitle').innerText = "Coordenadas Geográficas";
+    document.getElementById('geoText').innerText = "Ubicación estratégica en zonas productivas del Perú.";
+    document.getElementById('marketTitle').innerText = "Mercados";
+    document.getElementById('marketText').innerText = "Exportamos a diferentes países del mundo.";
+    document.getElementById('coopTitle').innerText = "Cooperaciones";
+    document.getElementById('coopText').innerText = "Trabajamos con productores locales y socios internacionales.";
+    document.getElementById('contactTitle').innerText = "Contáctanos";
+    document.getElementById('contactText').innerText = "Contáctanos vía WhatsApp para más información.";
+  }
+
+  if (lang === 'en') {
+    document.getElementById('subtitle').innerText = "Export of high-quality Andean products";
+    document.getElementById('aboutTitle').innerText = "About Us";
+    document.getElementById('aboutText').innerText = "We are a Peruvian company exporting Andean products such as maca, quinoa, and chuño flour.";
+    document.getElementById('productsTitle').innerText = "Our Products";
+    document.getElementById('logisticsTitle').innerText = "Production & Logistics";
+    document.getElementById('logisticsText').innerText = "We have efficient production, storage and distribution processes.";
+    document.getElementById('zoneTitle').innerText = "Production Area";
+    document.getElementById('zoneText').innerText = "Our products come from the Peruvian Andes.";
+    document.getElementById('visionTitle').innerText = "Vision & Mission";
+    document.getElementById('visionText').innerText = "Our mission is to deliver high-quality products worldwide.";
+    document.getElementById('equipmentTitle').innerText = "Equipment";
+    document.getElementById('equipmentText').innerText = "We use modern machinery to ensure quality.";
+    document.getElementById('geoTitle').innerText = "Geographical Coordinates";
+    document.getElementById('geoText').innerText = "Strategic location in productive areas of Peru.";
+    document.getElementById('marketTitle').innerText = "Markets";
+    document.getElementById('marketText').innerText = "We export to different countries around the world.";
+    document.getElementById('coopTitle').innerText = "Cooperations";
+    document.getElementById('coopText').innerText = "We work with local producers and international partners.";
+    document.getElementById('contactTitle').innerText = "Contact Us";
+    document.getElementById('contactText').innerText = "Contact us via WhatsApp for more information.";
+  }
+
+  if (lang === 'ar') {
+    document.getElementById('subtitle').innerText = "تصدير منتجات الأنديز عالية الجودة";
+    document.getElementById('aboutTitle').innerText = "معلومات عنا";
+    document.getElementById('aboutText').innerText = "نحن شركة بيروفية تقوم بتصدير منتجات الأنديز مثل الماكا والكينوا ودقيق التشونو.";
+    document.getElementById('productsTitle').innerText = "منتجاتنا";
+    document.getElementById('logisticsTitle').innerText = "الإنتاج والخدمات اللوجستية";
+    document.getElementById('logisticsText').innerText = "لدينا عمليات إنتاج وتخزين وتوزيع فعالة.";
+    document.getElementById('zoneTitle').innerText = "منطقة الإنتاج";
+    document.getElementById('zoneText').innerText = "منتجاتنا تأتي من جبال الأنديز في بيرو.";
+    document.getElementById('visionTitle').innerText = "الرؤية والرسالة";
+    document.getElementById('visionText').innerText = "مهمتنا هي تقديم منتجات عالية الجودة إلى العالم.";
+    document.getElementById('equipmentTitle').innerText = "المعدات";
+    document.getElementById('equipmentText').innerText = "نستخدم معدات حديثة لضمان الجودة.";
+    document.getElementById('geoTitle').innerText = "الإحداثيات الجغرافية";
+    document.getElementById('geoText').innerText = "موقع استراتيجي في مناطق الإنتاج في بيرو.";
+    document.getElementById('marketTitle').innerText = "الأسواق";
+    document.getElementById('marketText').innerText = "نصدر إلى مختلف دول العالم.";
+    document.getElementById('coopTitle').innerText = "التعاون";
+    document.getElementById('coopText').innerText = "نعمل مع منتجين محليين وشركاء دوليين.";
+    document.getElementById('contactTitle').innerText = "اتصل بنا";
+    document.getElementById('contactText').innerText = "تواصل معنا عبر واتساب لمزيد من المعلومات.";
+  }
+}
+</script>
+
+<script>
+function mostrarProducto(producto) {
+  let info = "";
+
+  if (producto === "maca") {
+    info = "<h3>Maca</h3><p>La maca es un superalimento andino que aumenta la energía, mejora la resistencia y equilibra las hormonas.</p>";
+  }
+
+  if (producto === "quinua") {
+    info = "<h3>Quinua</h3><p>La quinua es rica en proteínas, aminoácidos esenciales y es ideal para una alimentación saludable.</p>";
+  }
+
+  if (producto === "chuno") {
+    info = "<h3>Harina de chuño</h3><p>El chuño es un alimento tradicional andino con alto valor energético y larga conservación.</p>";
+  }
+
+  document.getElementById("infoProducto").innerHTML = info;
+}
+</script>
+<script>
+function irProducto(pagina) {
+  window.location.href = pagina;
+}
+</script>
+
+
+</body>
+</html>
