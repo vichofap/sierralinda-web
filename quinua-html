@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Quinua - Sierra Linda Export</title>
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #f5f5f5, #e8f5e9);
+}
+
+/* HEADER (PARALLAX PRO) */
+header {
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("fondoquinua.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 48px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+/* SECCIONES */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* TARJETAS */
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+/* BOTÓN */
+.boton {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #2e7d32;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.boton:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Quinua Andina</h1>
+</header>
+
+<section>
+  <h2>Descripción</h2>
+  <p>
+    La quinua es un superalimento andino reconocido mundialmente por su alto valor nutricional.
+    Cultivada en las alturas del Perú, es rica en proteínas, vitaminas y minerales.
+  </p>
+</section>
+
+<section>
+  <h2>Beneficios</h2>
+
+  <div class="info">
+    <div class="card">
+      <h3>Alta Proteína</h3>
+      <p>Contiene todos los aminoácidos esenciales.</p>
+    </div>
+
+    <div class="card">
+      <h3>Rica en Hierro</h3>
+      <p>Ayuda a prevenir la anemia.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sin Gluten</h3>
+      <p>Apta para personas celíacas.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Información Nutricional (100g)</h2>
+
+  <div class="info">
+    <div class="card">
+      <h3>Proteína</h3>
+      <p>14 - 18%</p>
+    </div>
+
+    <div class="card">
+      <h3>Fibra</h3>
+      <p>7%</p>
+    </div>
+
+    <div class="card">
+      <h3>Calcio</h3>
+      <p>47 mg</p>
+    </div>
+
+    <div class="card">
+      <h3>Hierro</h3>
+      <p>4.6 mg</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Exportación</h2>
+  <p>
+    Nuestra quinua cumple estándares internacionales de calidad y es exportada a múltiples países.
+  </p>
+
+  <a href="index.html" class="boton">⬅ Volver</a>
+</section>
+
+</body>
+</html>
+</html>
